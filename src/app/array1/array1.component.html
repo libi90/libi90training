@@ -1,0 +1,13 @@
+
+<label for="colors">Choose a color:</label>
+
+<select name="color" (change)="colors=$event.target.value"id ="">
+  <option value="{{i}}" *ngFor="let i of color">{{i}}</option>
+  </select>
+ <p [ngStyle]="{'color':colors}">color changing as per selection</p>
+
+  <p [ngClass]="'blueActive'">angular directives</p>
+  <p [ngClass]="{'blueActive':condition}">hello world</p>
+  <p [ngClass]="{'blueActive':condition==true,'bluedisable':condition1==false}">Libi Babu</p>
+  
+   

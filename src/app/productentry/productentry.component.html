@@ -1,0 +1,17 @@
+<form (ngSubmit)="save()">
+    <div class="form-group">
+      <label for="pname">product name</label>
+      <input type="text" class="form-control" id="pname" minlength="3" #Name="ngModel"[(ngModel)]="model.name"name="name">
+      <div [hidden]="Name.valid||Name.pristine" class="alert alert-danger">minimum 3 characters</div>
+    </div>
+    <div class="form-group">
+        <label for="pid">product id</label>
+        <input type="text" class="form-control" id="pid" [(ngModel)]="model.pid"name="pid">
+      </div>
+      <div class="form-group">
+        <label for="price">product price</label>
+        <input type="text" class="form-control" id="price" [(ngModel)]="model.price"name="price">
+      </div>
+    
+    <button >save</button>
+  </form>

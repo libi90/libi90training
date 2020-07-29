@@ -1,0 +1,19 @@
+<div style="margin-left: 30%;background-color: aqua;width: 400px;height: 400px;">
+
+<!-- value1<input type="text" value="{{value1}}" (input)="getEvent()"><br> -->
+<!-- value1<input type="text" value="{{value1}}" (input)="getEvent($event)"><br> -->
+<div  *ngIf="value1==''">
+ 
+    value1<input type="text" value="{{value1}}" (input)= "value1=$event.target.value"><br>
+    value1={{value1}}<br>
+</div>
+<div *ngIf="value1!=''"> 
+    value2 <input type="text" value="{{value2}}"(input)= "value2=$event.target.value">value2={{value2}}<br>
+</div>
+<button (click)="add()">add</button><br>
+Result<input type="text" value="{{sum}}">
+
+
+</div> 
+
+ 
